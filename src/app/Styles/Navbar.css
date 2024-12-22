@@ -1,0 +1,91 @@
+/* Navbar container */
+.navbar-container {
+  background-color: #0f2a3f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.5rem; /* For mobile */
+  font-weight: bold;
+  margin-left: 1.25rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger menu button (for mobile) */
+.hamburger-button {
+  color: white;
+  display: block; /* Visible only on mobile */
+  border: none;
+  background: none;
+}
+
+.hamburger-button:hover {
+  cursor: pointer;
+}
+
+/* Navigation links container */
+.nav-links-container {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  background-color: #0f2a3f;
+  text-align: center;
+}
+
+.nav-open {
+  display: block;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #3b82f6; /* Hover effect: Tailwind's blue-500 */
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+  .hamburger-button {
+    display: none; /* Hide hamburger menu */
+  }
+
+  .nav-links-container {
+    position: relative;
+    top: 0;
+    width: auto;
+    display: flex; /* Show nav links horizontally */
+  }
+
+  .nav-links {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .nav-link {
+    margin: 0 1.25rem;
+  }
+}
